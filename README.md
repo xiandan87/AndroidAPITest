@@ -1,8 +1,8 @@
 # AndroidAPITest
 
 #1.测试MainActivity启动模式为singleTask的话，从其他activity重新跳转回来并清理它之上的activity的话，是否还需要配合FLAG_ACTIVITY_CLEAR_TOP使用？
-  测试流程为 MainActivity->TestActivityA->TestActivityB->MainActivity
-  通过 adb shell dumpsys activity | grep androidapi.pop.test 命令查看栈信息
+   测试流程为 MainActivity->TestActivityA->TestActivityB->MainActivity
+   通过 adb shell dumpsys activity | grep androidapi.pop.test 命令查看栈信息
 
   最后两步的结果分别为：
    TaskRecord{21ad56a7 #253 A=androidapi.pop.test, isShadow:false U=0 sz=3}
