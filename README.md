@@ -67,3 +67,13 @@
 
    可以看出隐式启动activity，该activity必须要配置category才能匹配到。从栈信息又可以看到被启动的activity的taskAffinity如果没有特别指明，
    则与启动它的activity是相同的
+
+# 5.测试一个task里面是否可以存在两个启动模式为singleTask的activity
+    测试流程MainActivity->TestActivityA
+     
+    修改TestActivityA的启动模式也为singleTask，栈信息为：
+    TaskRecord{183a7dba #67 A=androidapi.pop.test, isShadow:false U=0 sz=2}
+	Run #3: ActivityRecord{10c68679 u0 androidapi.pop.test/.TestActivityA, isShadow:false t67}
+        Run #2: ActivityRecord{79895cb u0 androidapi.pop.test/.MainActivity, isShadow:false t67}
+     
+    可以看出虽然MainActivity和TestActivityA都指定为singleTask的启动模式，但是他们仍然可以共存一个task中

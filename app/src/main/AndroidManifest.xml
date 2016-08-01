@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <!--<activity android:name=".TestActivityA"/>-->
-        <activity android:name=".TestActivityA" android:taskAffinity="pop.new.task"/> //test3
+        <!--<activity android:name=".TestActivityA" android:taskAffinity="pop.new.task"/> //test3-->
+        <activity android:name=".TestActivityA" android:launchMode="singleTask"/>  //test5
        <!-- <activity android:name=".TestActivityB" />-->
         <activity android:name=".TestActivityB">  //test4
             <intent-filter>
